@@ -61,6 +61,7 @@ struct ContentView: View {
                 
                 Section("Общая сумма чека с чаевыми") {
                     Text(grandTotal, format: .currency(code: Locale.current.currency?.identifier ?? "RU"))
+                        .foregroundStyle(tipPercentage == 0 ? .red : .black )
                 }
             }
             .navigationTitle("Делёжка")
